@@ -23,7 +23,7 @@ public class HateoasController {
 	public HttpEntity<Antricicclagio> arPush(ApiInput input) {
 		
 		Antricicclagio acc = new Antricicclagio();
-		acc.setInput1("idSoggetto");
+		acc.setInput1("idSogg");
 		acc.setInput2("motivi");
 		
 	
@@ -36,7 +36,7 @@ public class HateoasController {
 	public HttpEntity<Antricicclagio> anagrafe(ApiInput input) {
 	 
 		Antricicclagio acc = new Antricicclagio();
-		acc.setInput1("numeroConto");
+		acc.setInput1("numeroCont");
 		acc.setInput2("motivi");
 		acc.setInput3("idBolletino");
 		
