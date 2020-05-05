@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>User</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+        <h2>List of User</h2>
+
+        <table>
+            <tr>
+               
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+            
+            <tr>
+                <td th:text="${user.name}">Id</td>
+                <td th:text="${user.job}">Name</td>
+                 <span th:if = "${card != null}">
+                <td th:text="${card.cardNumber}">CardNumber</td>
+                <td th:text="${card.cardType}">Type</td></span>
+               
+            </tr>
+        </table>
+
+    </body>
+</html>
