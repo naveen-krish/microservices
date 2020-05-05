@@ -26,8 +26,10 @@ public class HateoasController {
 		acc.setInput1("idSogg");
 		acc.setInput2("motivi");
 		
-	
-		acc.add(linkTo(methodOn(HateoasController.class).anagrafe(input)).withRel(" Transition : anagrafe-ricerca "));
+	        Link api_document_link = new Link("http://api.developer.antricclagio.com/documentation");
+		acc.add(linkTo(methodOn(HateoasController.class).anagrafe(input)).withRel(" Transition : anagrafe-ricerca "),
+				api_document_link);
+		  
 		  
 		 return new ResponseEntity<>(acc,HttpStatus.OK);
 	}
@@ -39,8 +41,9 @@ public class HateoasController {
 		acc.setInput1("numeroCont");
 		acc.setInput2("motivi");
 		acc.setInput3("idBolletino");
+		Link api_document_link = new Link("http://api.developer.antricclagio.com/documentation");
 		
-		acc.add(linkTo(methodOn(HateoasController.class).sconfino(input)).withRel(" Transition : sconfino "));
+		acc.add(linkTo(methodOn(HateoasController.class).sconfino(input)).withRel(" Transition : sconfino "),api_document_link);
 		
 		 return new ResponseEntity<>(acc,HttpStatus.OK);
 	}
