@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: apicache
+server:
+  port: 8082
