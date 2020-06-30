@@ -29,7 +29,7 @@ public class BulkHeadController {
 					.build();
 		
 			BulkheadRegistry registry = BulkheadRegistry.of(config);
-			bulkhead = registry.bulkhead("service");
+			bulkhead = registry.bulkhead("mockService");
 			Runnable runnable = () -> mockService.computeWork();
 			bulkhead.executeRunnable(runnable);
 		} catch (BulkheadFullException e) {
