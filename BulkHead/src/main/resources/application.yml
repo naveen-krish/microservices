@@ -1,0 +1,7 @@
+server:
+ port: 9002
+resilience4j.bulkhead:
+  instances:
+    mockService:
+      maxConcurrentCalls: 1
+      maxWaitDuration: 1ms
